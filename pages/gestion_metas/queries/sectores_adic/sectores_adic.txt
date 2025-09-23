@@ -1,0 +1,3 @@
+SELECT * 
+FROM test_meta_mg."sectores" 
+WHERE estado = 1 AND sector = ANY( string_to_array( {{ _.uniq( _.flatten(tbl_coplaboradores.selectedRows.map(r => r.sectores)) ) .filter(Boolean) .map(s => String(s).trim()) .join(",") // -> "ENERGIA,ONG-ESPAÑA" }}, ',' ) ); 

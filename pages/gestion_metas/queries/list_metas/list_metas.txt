@@ -1,0 +1,3 @@
+SELECT * 
+FROM test_meta_mg."tipo_meta"
+WHERE tipo_meta <> 'base';

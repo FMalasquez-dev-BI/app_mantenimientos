@@ -1,0 +1,2 @@
+SELECT DISTINCT cargo_empresa
+FROM public."dim_nomina_coorporacion";

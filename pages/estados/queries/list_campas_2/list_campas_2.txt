@@ -1,0 +1,32 @@
+WITH cte_summary AS (
+SELECT
+    a.idcampa,
+    COUNT(
+        -- La expresión CASE retorna 1 si al menos una columna tiene el valor 'PENDIENTE'
+        -- y NULL si ninguna lo tiene. COUNT() ignora los valores NULL.
+        CASE
+            WHEN a.ranking = 'PENDIENTE' OR
+                 a.segmento_gestion = 'PENDIENTE' OR
+                 a.liquidacion = 'PENDIENTE' OR
+                 a.comision = 'PENDIENTE' OR
+                 a.bonos = 'PENDIENTE' OR
+                 a.salida_anticipada = 'PENDIENTE' OR
+                 a.condicionamiento = 'PENDIENTE' OR
+                 a.proceso_alta = 'PENDIENTE' OR
+								 a.recuperable = 'PENDIENTE' OR
+								 a.objetivo_bono = 'PENDIENTE'
+            THEN 1
+            ELSE NULL
+        END
+    ) AS pendientes_amount
+FROM
+    sales_management.dim_states a
+WHERE a.idcampa IN (240,233,228,213,89)
+GROUP BY
+    a.idcampa
+ORDER BY
+    a.idcampa)	
+SELECT b.nombrecampaña,a.*  
+FROM cte_summary a
+INNER JOIN sales_management.dim_campaigns b ON a.idcampa = b.idcampaña ;		
+

@@ -1,0 +1,3 @@
+SELECT * 
+FROM test_meta_mg."test_colaboradores_sector"
+WHERE id_colaborador = {{appsmith.store.colab_selected.id_colaborador}};

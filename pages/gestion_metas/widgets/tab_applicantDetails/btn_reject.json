@@ -1,0 +1,66 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 141,
+  "boxShadow": "none",
+  "buttonColor": "#dc2626",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": "{{\ntbl_coplaboradores.selectedRow.Status === 'Rejected' ||\ntbl_coplaboradores.selectedRow.Status === 'Closed' ||\ntbl_coplaboradores.selectedRow.Status === 'Active' ||\ntbl_coplaboradores.selectedRow.Status === 'Disbursed' ||\ntbl_coplaboradores.selectedRow.Status === 'At Risk' ||\ntbl_coplaboradores.selectedRow.Status === 'Late'\n}}",
+  "isLoading": false,
+  "isVisible": "{{\nutils.userToken.data.role === 'Admin' || utils.userToken.data.role === 'Loan Officer'\n}}",
+  "key": "ka9k8cqdb2",
+  "leftColumn": 21,
+  "minWidth": 120,
+  "onClick": "{{showModal('mdl_rejectLoan');}}",
+  "originalBottomRow": 141,
+  "originalTopRow": 136,
+  "parentColumnSpace": 11.1416015625,
+  "parentId": "nyt2r0gtg5",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 33,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "text": "Reject",
+  "topRow": 136,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "7gy3sn0czk",
+  "widgetName": "btn_reject"
+}

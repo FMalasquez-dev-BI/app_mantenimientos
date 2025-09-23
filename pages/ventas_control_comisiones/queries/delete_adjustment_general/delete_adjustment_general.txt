@@ -1,0 +1,3 @@
+UPDATE commission_management."commission_adjustments_general"
+SET status = 0
+WHERE adj_main_id = {{this.params.adj_id}};

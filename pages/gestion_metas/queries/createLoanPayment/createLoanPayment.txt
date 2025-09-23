@@ -1,0 +1,11 @@
+INSERT INTO loan_payment
+  (loan_application_id, payment_date, principal, interest, amount, status)
+VALUES
+  (
+    {{ tbl_coplaboradores.selectedRow.Id }},
+    {{ this.params.paymentDate }},
+    {{ parseInt(tbl_coplaboradores.selectedRow.AmountOffered.replace(/[^\d.-]/g, '')) }},
+		{{ tbl_coplaboradores.selectedRow.Interest }},
+		{{ this.params.amount }},
+		'Scheduled'
+  );

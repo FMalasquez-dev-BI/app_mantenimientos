@@ -1,0 +1,12 @@
+UPDATE sales_management.dim_states SET
+"ranking" = {{select_ranking.selectedOptionValue}},
+"segmento_gestion" = {{select_seg_gest.selectedOptionValue}},
+"liquidacion" = {{select_liq.selectedOptionValue}},
+"comision" = {{select_comision.selectedOptionValue}},
+"bonos" = {{select_bonos.selectedOptionValue}},
+"salida_anticipada" = {{select_salida.selectedOptionValue}},
+"condicionamiento" = {{select_cond.selectedOptionValue}},
+"proceso_alta" = {{select_proceso.selectedOptionValue}},
+"recuperable" = {{select_recuperable.selectedOptionValue}},
+"objetivo_bono" = {{select_obj_bono.selectedOptionValue}}
+  WHERE idestado = {{appsmith.store.selected_estado.idestado}};

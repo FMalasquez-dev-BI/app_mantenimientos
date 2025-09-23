@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 18,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.selected_estado.segmento_gestion))(select_seg_gest.options, select_seg_gest.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "el2uerez64",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "SEGMENTO GESTIÓN",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 30,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 19,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "onOptionChange": "",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 11.493749999999999,
+  "parentId": "m974pelrcm",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 48,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"PRE CIERRE\",\n    \"value\": \"PRE CIERRE\"\n  },\n  {\n    \"label\": \"RECUPERACION\",\n    \"value\": \"RECUPERACION\"\n  },\n  {\n    \"label\": \"CIERRE COMPLETO\",\n    \"value\": \"CIERRE COMPLETO\"\n  },\n  {\n    \"label\": \"GESTION BO\",\n    \"value\": \"GESTION BO\"\n  },\n  {\n    \"label\": \"GESTION SISTEMA\",\n    \"value\": \"GESTION SISTEMA\"\n  },\n  {\n    \"label\": \"GESTION SUP\",\n    \"value\": \"GESTION SUP\"\n  },\n  {\n    \"label\": \"SIN SEGMENTO\",\n    \"value\": \"SIN SEGMENTO\"\n  },\n  {\n    \"label\": \"CANCELADO\",\n    \"value\": \"CANCELADO\"\n  }\n]",
+  "topRow": 11,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "ga55snqcwi",
+  "widgetName": "select_seg_gest"
+}

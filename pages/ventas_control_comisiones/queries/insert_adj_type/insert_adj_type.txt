@@ -1,0 +1,2 @@
+INSERT INTO commission_management."adjustment_types" ("type_name", "calculation_type", "purpose_id")
+  VALUES ({{this.params.type_name}}, {{this.params.calc_type}}, {{this.params.purpose_id}});

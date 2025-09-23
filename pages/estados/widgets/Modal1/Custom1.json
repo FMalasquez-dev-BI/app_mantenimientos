@@ -1,0 +1,67 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 53,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultModel": "{\n  \"tips\": [\n    \"Pass data to this widget in the default model field\",\n    \"Access data in the javascript file using the appsmith.model variable\",\n    \"Create events in the widget and trigger them in the javascript file using appsmith.triggerEvent('eventName')\",\n    \"Access data in CSS as var(--appsmith-model-{property-name})\"\n  ]\n}",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "events": [
+    "onResetClick"
+  ],
+  "isCanvas": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "0ccivjbaiu",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 46,
+  "mobileLeftColumn": 6,
+  "mobileRightColumn": 29,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
+  "originalBottomRow": 54,
+  "originalTopRow": 2,
+  "parentColumnSpace": 6.9375,
+  "parentId": "m6q3qn001v",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 62,
+  "shouldScrollContents": true,
+  "srcDoc": {
+    "css": ".custom-modal {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.slider-container {\n  position: relative;\n  width: 90%;\n  max-width: 900px;\n  height: 500px;\n  overflow: hidden;\n  border-radius: 12px;\n  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);\n  background: #fff;\n}\n\n.slide {\n  display: none;\n  width: 100%;\n  height: 100%;\n}\n\n.slide.active {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.zoomable {\n  max-width: 100%;\n  max-height: 100%;\n  transition: transform 0.3s ease;\n}\n\n/* Navigation buttons */\n.prev, .next {\n  cursor: pointer;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  background-color: rgba(0, 0, 0, 0.5);\n  color: #fff;\n  border: none;\n  font-size: 24px;\n  padding: 10px 16px;\n  border-radius: 50%;\n  user-select: none;\n  transition: background 0.3s;\n}\n\n.prev:hover, .next:hover {\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n.prev {\n  left: 15px;\n}\n\n.next {\n  right: 15px;\n}\n\n/* Dots */\n.dots {\n  text-align: center;\n  position: absolute;\n  bottom: 15px;\n  width: 100%;\n}\n\n.dot {\n  cursor: pointer;\n  height: 12px;\n  width: 12px;\n  margin: 0 6px;\n  background-color: #bbb;\n  border-radius: 50%;\n  display: inline-block;\n  transition: background-color 0.3s;\n}\n\n.dot.active, .dot:hover {\n  background-color: #333;\n}\n\n/* Zoom controls */\n.zoom-controls {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  display: flex;\n  gap: 6px;\n}\n\n.zoom-controls button {\n  background: rgba(0, 0, 0, 0.6);\n  color: white;\n  border: none;\n  padding: 6px 10px;\n  font-size: 16px;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background 0.3s;\n}\n\n.zoom-controls button:hover {\n  background: rgba(0, 0, 0, 0.8);\n}\n\n.zoomable {\n  max-width: 100%;\n  max-height: 100%;\n  transition: transform 0.2s ease;\n  cursor: grab;\n}\n\n.zoomable:active {\n  cursor: grabbing;\n}",
+    "html": "<div class=\"custom-modal\">\n  <div class=\"slider-container\">\n    <!-- Slides -->\n    <div class=\"slide active\">\n      <img src=\"https://raw.githubusercontent.com/FMalasquez-dev-BI/svg-resource-library/refs/heads/main/svgs/app_smith/tutorials/App_Estados_1.svg\" alt=\"Step 1\" class=\"zoomable\">\n    </div>\n    <div class=\"slide\">\n      <img src=\"https://raw.githubusercontent.com/FMalasquez-dev-BI/svg-resource-library/refs/heads/main/svgs/app_smith/tutorials/App_Estados_2.svg\" alt=\"Step 2\" class=\"zoomable\">\n    </div>\n    <div class=\"slide\">\n      <img src=\"https://raw.githubusercontent.com/FMalasquez-dev-BI/svg-resource-library/refs/heads/main/svgs/app_smith/tutorials/App_Estados_3.svg\" alt=\"Step 3\" class=\"zoomable\">\n    </div>\n\n    <!-- Navigation buttons -->\n    <button class=\"prev\">❮</button>\n    <button class=\"next\">❯</button>\n\n    <!-- Dots -->\n    <div class=\"dots\">\n      <span class=\"dot active\"></span>\n      <span class=\"dot\"></span>\n      <span class=\"dot\"></span>\n    </div>\n\t\t\n\t\t    <!-- Zoom controls -->\n    <div class=\"zoom-controls\">\n      <button id=\"zoomIn\">+</button>\n      <button id=\"zoomOut\">-</button>\n      <button id=\"resetZoom\">⟲</button>\n    </div>\n  </div>\n</div>\n",
+    "js": "let currentSlide = 0;\nconst slides = document.querySelectorAll(\".slide\");\nconst dots = document.querySelectorAll(\".dot\");\nconst prevBtn = document.querySelector(\".prev\");\nconst nextBtn = document.querySelector(\".next\");\nlet zoomLevel = 1;\nlet panX = 0,\n  panY = 0;\nlet isPanning = false;\nlet startX, startY;\nfunction showSlide(index) {\n  if (index >= slides.length) currentSlide = 0;\n  if (index < 0) currentSlide = slides.length - 1;\n  slides.forEach((slide, i) => {\n    slide.classList.remove(\"active\");\n    dots[i].classList.remove(\"active\");\n  });\n  slides[currentSlide].classList.add(\"active\");\n  dots[currentSlide].classList.add(\"active\");\n  resetZoom(); // reset zoom when changing slide\n}\nfunction applyTransform() {\n  const activeImg = slides[currentSlide].querySelector(\".zoomable\");\n  activeImg.style.transform = `translate(${panX}px, ${panY}px) scale(${zoomLevel})`;\n}\nfunction resetZoom() {\n  zoomLevel = 1;\n  panX = 0;\n  panY = 0;\n  applyTransform();\n}\n\n// Navigation\nnextBtn.addEventListener(\"click\", () => {\n  currentSlide++;\n  showSlide(currentSlide);\n});\nprevBtn.addEventListener(\"click\", () => {\n  currentSlide--;\n  showSlide(currentSlide);\n});\n\n// Dot navigation\ndots.forEach((dot, i) => {\n  dot.addEventListener(\"click\", () => {\n    currentSlide = i;\n    showSlide(currentSlide);\n  });\n});\n\n// Zoom controls\ndocument.getElementById(\"zoomIn\").addEventListener(\"click\", () => {\n  zoomLevel += 0.2;\n  applyTransform();\n});\ndocument.getElementById(\"zoomOut\").addEventListener(\"click\", () => {\n  zoomLevel = Math.max(0.5, zoomLevel - 0.2);\n  applyTransform();\n});\ndocument.getElementById(\"resetZoom\").addEventListener(\"click\", resetZoom);\n\n// Pan controls\nslides.forEach(slide => {\n  const img = slide.querySelector(\".zoomable\");\n  img.addEventListener(\"mousedown\", e => {\n    if (zoomLevel <= 1) return; // no pan if not zoomed\n    isPanning = true;\n    startX = e.clientX - panX;\n    startY = e.clientY - panY;\n  });\n  img.addEventListener(\"mousemove\", e => {\n    if (!isPanning) return;\n    panX = e.clientX - startX;\n    panY = e.clientY - startY;\n    applyTransform();\n  });\n  img.addEventListener(\"mouseup\", () => isPanning = false);\n  img.addEventListener(\"mouseleave\", () => isPanning = false);\n});\n\n// Init\nshowSlide(currentSlide);"
+  },
+  "theme": "{{appsmith.theme}}",
+  "topRow": 2,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": ".custom-modal {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.slider-container {\n  position: relative;\n  width: 90%;\n  max-width: 900px;\n  height: 500px;\n  overflow: hidden;\n  border-radius: 12px;\n  box-shadow: 0 4px 20px rgba(0,0,0,0.2);\n  background: #fff;\n}\n\n.slide {\n  display: none;\n  width: 100%;\n  height: 100%;\n}\n\n.slide.active {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.zoomable {\n  max-width: 100%;\n  max-height: 100%;\n  transition: transform 0.3s ease;\n}\n\n/* Navigation buttons */\n.prev, .next {\n  cursor: pointer;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  background-color: rgba(0,0,0,0.5);\n  color: #fff;\n  border: none;\n  font-size: 24px;\n  padding: 10px 16px;\n  border-radius: 50%;\n  user-select: none;\n  transition: background 0.3s;\n}\n\n.prev:hover, .next:hover {\n  background-color: rgba(0,0,0,0.8);\n}\n\n.prev { left: 15px; }\n.next { right: 15px; }\n\n/* Dots */\n.dots {\n  text-align: center;\n  position: absolute;\n  bottom: 15px;\n  width: 100%;\n}\n\n.dot {\n  cursor: pointer;\n  height: 12px;\n  width: 12px;\n  margin: 0 6px;\n  background-color: #bbb;\n  border-radius: 50%;\n  display: inline-block;\n  transition: background-color 0.3s;\n}\n\n.dot.active, .dot:hover {\n  background-color: #333;\n}\n\n/* Zoom controls */\n.zoom-controls {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  display: flex;\n  gap: 6px;\n}\n\n.zoom-controls button {\n  background: rgba(0,0,0,0.6);\n  color: white;\n  border: none;\n  padding: 6px 10px;\n  font-size: 16px;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background 0.3s;\n}\n\n.zoom-controls button:hover {\n  background: rgba(0,0,0,0.8);\n}\n\n\n.zoomable {\n  max-width: 100%;\n  max-height: 100%;\n  transition: transform 0.2s ease;\n  cursor: grab;\n}\n\n.zoomable:active {\n  cursor: grabbing;\n}\n\n",
+    "html": "<div class=\"custom-modal\">\n  <div class=\"slider-container\">\n    <!-- Slides -->\n    <div class=\"slide active\">\n      <img src=\"https://raw.githubusercontent.com/FMalasquez-dev-BI/svg-resource-library/refs/heads/main/svgs/app_smith/tutorials/App_Estados_1.svg\" alt=\"Step 1\" class=\"zoomable\">\n    </div>\n    <div class=\"slide\">\n      <img src=\"https://raw.githubusercontent.com/FMalasquez-dev-BI/svg-resource-library/refs/heads/main/svgs/app_smith/tutorials/App_Estados_2.svg\" alt=\"Step 2\" class=\"zoomable\">\n    </div>\n    <div class=\"slide\">\n      <img src=\"https://raw.githubusercontent.com/FMalasquez-dev-BI/svg-resource-library/refs/heads/main/svgs/app_smith/tutorials/App_Estados_3.svg\" alt=\"Step 3\" class=\"zoomable\">\n    </div>\n\n    <!-- Navigation buttons -->\n    <button class=\"prev\">❮</button>\n    <button class=\"next\">❯</button>\n\n    <!-- Dots -->\n    <div class=\"dots\">\n      <span class=\"dot active\"></span>\n      <span class=\"dot\"></span>\n      <span class=\"dot\"></span>\n    </div>\n\t\t\n\t\t    <!-- Zoom controls -->\n    <div class=\"zoom-controls\">\n      <button id=\"zoomIn\">+</button>\n      <button id=\"zoomOut\">-</button>\n      <button id=\"resetZoom\">⟲</button>\n    </div>\n  </div>\n</div>\n",
+    "js": "let currentSlide = 0;\nconst slides = document.querySelectorAll(\".slide\");\nconst dots = document.querySelectorAll(\".dot\");\nconst prevBtn = document.querySelector(\".prev\");\nconst nextBtn = document.querySelector(\".next\");\n\nlet zoomLevel = 1; \nlet panX = 0, panY = 0;\nlet isPanning = false;\nlet startX, startY;\n\nfunction showSlide(index) {\n  if (index >= slides.length) currentSlide = 0;\n  if (index < 0) currentSlide = slides.length - 1;\n\n  slides.forEach((slide, i) => {\n    slide.classList.remove(\"active\");\n    dots[i].classList.remove(\"active\");\n  });\n\n  slides[currentSlide].classList.add(\"active\");\n  dots[currentSlide].classList.add(\"active\");\n\n  resetZoom(); // reset zoom when changing slide\n}\n\nfunction applyTransform() {\n  const activeImg = slides[currentSlide].querySelector(\".zoomable\");\n  activeImg.style.transform = `translate(${panX}px, ${panY}px) scale(${zoomLevel})`;\n}\n\nfunction resetZoom() {\n  zoomLevel = 1;\n  panX = 0;\n  panY = 0;\n  applyTransform();\n}\n\n// Navigation\nnextBtn.addEventListener(\"click\", () => {\n  currentSlide++;\n  showSlide(currentSlide);\n});\n\nprevBtn.addEventListener(\"click\", () => {\n  currentSlide--;\n  showSlide(currentSlide);\n});\n\n// Dot navigation\ndots.forEach((dot, i) => {\n  dot.addEventListener(\"click\", () => {\n    currentSlide = i;\n    showSlide(currentSlide);\n  });\n});\n\n// Zoom controls\ndocument.getElementById(\"zoomIn\").addEventListener(\"click\", () => {\n  zoomLevel += 0.2;\n  applyTransform();\n});\n\ndocument.getElementById(\"zoomOut\").addEventListener(\"click\", () => {\n  zoomLevel = Math.max(0.5, zoomLevel - 0.2);\n  applyTransform();\n});\n\ndocument.getElementById(\"resetZoom\").addEventListener(\"click\", resetZoom);\n\n// Pan controls\nslides.forEach(slide => {\n  const img = slide.querySelector(\".zoomable\");\n\n  img.addEventListener(\"mousedown\", (e) => {\n    if (zoomLevel <= 1) return; // no pan if not zoomed\n    isPanning = true;\n    startX = e.clientX - panX;\n    startY = e.clientY - panY;\n  });\n\n  img.addEventListener(\"mousemove\", (e) => {\n    if (!isPanning) return;\n    panX = e.clientX - startX;\n    panY = e.clientY - startY;\n    applyTransform();\n  });\n\n  img.addEventListener(\"mouseup\", () => isPanning = false);\n  img.addEventListener(\"mouseleave\", () => isPanning = false);\n});\n\n// Init\nshowSlide(currentSlide);\n"
+  },
+  "version": 1,
+  "widgetId": "4sthkxk83e",
+  "widgetName": "Custom1"
+}

@@ -1,0 +1,69 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 77,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": "{{tbl_coplaboradores.selectedRow.Status == 'Waiting for Approval' || tbl_coplaboradores.selectedRow.Status === 'Disbursed' || tbl_coplaboradores.selectedRow.Status === 'Waiting for Approval' ||\ntbl_coplaboradores.selectedRow.Status === 'Rejected' ||\ntbl_coplaboradores.selectedRow.Status === 'Late' ||\ntbl_coplaboradores.selectedRow.Status === 'At Risk' ||\ntbl_coplaboradores.selectedRow.Status === 'Closed'\n}}",
+  "isLoading": false,
+  "isVisible": "{{\nutils.userToken.data.role === 'Admin' || utils.userToken.data.role === 'Loan Officer'\n}}",
+  "key": "ka9k8cqdb2",
+  "leftColumn": 39,
+  "minWidth": 120,
+  "onClick": "{{showModal('mdl_disburse');}}",
+  "originalBottomRow": 77,
+  "originalTopRow": 72,
+  "parentColumnSpace": 11.1416015625,
+  "parentId": "nyt2r0gtg5",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "text": "Disburse",
+  "topRow": 72,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "7vdl1w40qj",
+  "widgetName": "btn_disburse"
+}

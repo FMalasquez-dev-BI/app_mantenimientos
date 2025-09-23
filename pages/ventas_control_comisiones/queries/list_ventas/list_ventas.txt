@@ -1,0 +1,12 @@
+SELECT a.manage_id, a.fecha_registro, 
+b.proveedor,
+b.codigo_crm_cliente, b.tipo_venta,
+c.dni_nie AS dni_cliente,
+c.nombre_completo,
+b.fecha_activacion_vigente, b.fecha_desconexion_vigente, b.fecha_liquidacion, b.fecha_descomision, a.date_edit AS fecha_actualizacion_crm,
+CASE WHEN d.sale_id IS NULL THEN 0 ELSE 1 END AS commision_adjustment
+FROM sales_management.fact_sales a 
+INNER JOIN sales_management.dim_products b ON a.manage_id = b.manage_id
+INNER JOIN sales_management.dim_customers c ON a.manage_id = c.manage_id
+LEFT JOIN commission_management.commission_adjustments d ON a.manage_id = d.sale_id
+WHERE a.campa_id = {{List1.selectedItem.idcampaña}};

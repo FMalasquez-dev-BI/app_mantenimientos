@@ -1,0 +1,4 @@
+SELECT a.adj_type_id, a.type_name  
+FROM commission_management."adjustment_types" a
+LEFT JOIN commission_management.adjustment_purposes b ON a.purpose_id = b.purpose_id
+WHERE b.purpose_name = 'COMMISSION';

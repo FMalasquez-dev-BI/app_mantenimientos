@@ -1,0 +1,3 @@
+SELECT *
+FROM commission_management."adjustment_purposes"
+LIMIT 10;

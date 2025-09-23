@@ -1,0 +1,84 @@
+WITH cte_main AS (
+SELECT 
+a.manage_id,
+    a.id_nomina,
+    a.idcampa,
+    a.proveedor,
+    a.auditor,
+    a.fecha_registro,
+    a.fecha_liquidacion,
+    a.fecha_descuento,
+    a.fecha_activacion_vigente,
+    a.fecha_desconexion_vigente,
+    a.fecha_vigente,
+    a.fecha_instalacion,
+    a.idestado_actual,
+    a.id_ult_estado_cierre_mes_creacion,
+    a.codigo_crm_cliente,
+    a.dni_cliente,
+    a.tpo_servicio,
+    a.meses_diferencia,
+    a.fecha_comision,
+    a.fecha_descomision,
+    a.total_active_sales_for_group,
+    a.monto,
+    a.id_comision,
+    a.prod_adicionales,
+		a.comision_original,
+    a.comision_total,
+a.fecha_liquidacion_impacto,
+    a.indicador,
+    a.estado,
+   a.liquidacion,
+ CONCAT(a.idcampa, '-', a.fecha_liquidacion_impacto, '-', a.proveedor) AS cod_unico_corte ,
+b.date_edit AS ultima_edicion
+FROM vw_total_comisiones_alarmas a
+INNER JOIN sales_management.fact_sales b ON b.manage_id = a.manage_id 
+
+UNION ALL
+
+SELECT
+manage_id,
+id_nomina,
+idcampa,
+proveedor,
+auditor,
+fecha_registro,
+fecha_liquidacion,
+fecha_descuento,
+fecha_activacion_vigente,
+fecha_desconexion_vigente,
+fecha_vigente,
+NULL AS fecha_instalacion,
+idestado_actual,
+id_ult_estado_cierre_mes_creacion,
+codigo_crm_cliente,
+dni_cliente,
+tpo_servicio,
+meses_diferencia,
+fecha_comision,
+fecha_descomision,
+total_active_sales_for_group,
+monto,
+id_comision,
+prod_adicionales,
+comision_total AS comision_original,
+comision_total_ajustada AS comision_total,
+fecha_liquidacion_impacto,
+indicador,
+estado,
+liquidacion,
+cod_unico_corte, -- <--- Casting this column to TEXT
+ultima_edicion
+FROM test_ong_comisiones -- vw_total_comisiones_ong)
+),
+cte_main_2 AS (
+SELECT a.*, b.nombre_completo,
+CASE WHEN d.sale_id IS NULL THEN 0 ELSE 1 END AS commision_adjustment
+FROM cte_main a 
+LEFT JOIN sales_management.dim_customers b ON a.manage_id = b.manage_id
+LEFT JOIN commission_management.commission_adjustments d ON a.manage_id = d.sale_id AND d.status = 1
+WHERE idcampa = {{List1.selectedItem.idcampaña}})
+SELECT a.*, b.user_name
+FROM cte_main_2 a
+LEFT JOIN sales_management.dim_sales_staff b ON a.id_nomina = b.id_nomina

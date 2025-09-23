@@ -1,0 +1,92 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "displayName": "Menu Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "menuColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "menuItems.menuItemz1q870w7q4.isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "menuItems.menuItemz1q870w7q4.isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "menuItems.menuItemz1q870w7q4.onClick"
+    },
+    {
+      "key": "menuItems.menuItems917w1jnlu.onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconName": "chevron-down",
+  "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
+  "isCompact": false,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "5rvkd0pge1",
+  "label": "",
+  "leftColumn": 62,
+  "menuColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "menuItems": {
+    "menuItem1": {
+      "iconName": "log-out",
+      "id": "menuItem1",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Sign out",
+      "onClick": "{{utils.signOut();}}",
+      "widgetId": ""
+    },
+    "menuItems917w1jnlu": {
+      "iconName": "eye-open",
+      "id": "menuItems917w1jnlu",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "View Applications",
+      "onClick": "{{navigateTo('View Applications', {}, 'SAME_WINDOW')}}",
+      "widgetId": "ncg59f7mo7"
+    },
+    "menuItemz1q870w7q4": {
+      "iconName": "user",
+      "id": "menuItemz1q870w7q4",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": "{{\nutils.userToken.data.role === 'Admin'\n}}",
+      "label": "Manage users",
+      "onClick": "{{navigateTo('User Managment', {}, 'SAME_WINDOW')}}",
+      "widgetId": "fwk6n3esr5"
+    }
+  },
+  "menuItemsSource": "STATIC",
+  "menuVariant": "TERTIARY",
+  "parentColumnSpace": 19.8125,
+  "parentId": "vu450z7c03",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "topRow": 1,
+  "type": "MENU_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "08i7wbxu40",
+  "widgetName": "btn_menu"
+}

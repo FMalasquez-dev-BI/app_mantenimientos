@@ -1,0 +1,24 @@
+SELECT 
+    'ADJ_COM' AS origen_ajuste, a.adjustment_id AS id_adjust, 
+    a.adjustment_amount,	a.adj_type_id,	NULL as impact_liquidation, a.registered_date,
+    a.notes,	a.user_id,	a.last_modified,	a.status,
+    b.type_name
+FROM commission_management.commission_adjustments a
+LEFT JOIN commission_management.adjustment_types b ON a.adj_type_id = b.adj_type_id
+
+WHERE a.status = 1 AND sale_id =  {{this.params.id_sale}}
+
+UNION ALL
+
+SELECT 
+    'ADJ_GEN' AS origen_ajuste, a.adj_main_id AS id_adjust,
+    a.adjustment_amount,	a.adj_type_id,	a.impact_liquidation,	a.registered_date,
+    
+    a.notes,	a.user_id,	a.last_modified,	a.status,
+ b.type_name
+FROM commission_management.commission_adjustments_general a
+LEFT JOIN commission_management.adjustment_types b ON a.adj_type_id = b.adj_type_id
+
+
+WHERE a.status = 1 AND sale_id =  {{this.params.id_sale}}
+

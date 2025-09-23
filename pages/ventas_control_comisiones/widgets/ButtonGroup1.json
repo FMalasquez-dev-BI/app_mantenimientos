@@ -1,0 +1,126 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 8,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton2.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton2.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem0psi2hx59b.isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton2.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem0psi2hx59b.isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem0psi2hx59b.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton2": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "disabledWhenInvalid": false,
+      "iconName": "add",
+      "id": "groupButton2",
+      "index": 0,
+      "isDisabled": "{{ tbl_ventas.selectedRows.length === 0 }}\n",
+      "isVisible": true,
+      "label": "Ajustar",
+      "menuItems": {},
+      "onClick": "{{showModal(mdl_add_addition.name);}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton3": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "disabledWhenInvalid": false,
+      "iconName": "more",
+      "id": "groupButton3",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Mas",
+      "menuItems": {
+        "menuItem0psi2hx59b": {
+          "iconName": "add",
+          "id": "menuItem0psi2hx59b",
+          "index": 1,
+          "isDisabled": "{{appsmith.user.email === \"fmalasquez@gsi-peru.com\"}}",
+          "isVisible": true,
+          "label": "Nuevo Tipo Ajuste",
+          "onClick": "{{showModal(mdl_new_type_adjustment.name);}}",
+          "widgetId": "zb23fku480"
+        },
+        "menuItem2": {
+          "backgroundColor": "#FFFFFF",
+          "disabledWhenInvalid": false,
+          "id": "menuItem2",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "📌 Estados",
+          "onClick": "{{navigateTo('estados', {}, 'SAME_WINDOW');}}",
+          "widgetId": ""
+        }
+      },
+      "placement": "CENTER",
+      "widgetId": ""
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "xegy9jxl7s",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 48,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "orientation": "horizontal",
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
+  "parentColumnSpace": 17.9375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 10,
+  "topRow": 4,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "9jwk7ezu1b",
+  "widgetName": "ButtonGroup1"
+}

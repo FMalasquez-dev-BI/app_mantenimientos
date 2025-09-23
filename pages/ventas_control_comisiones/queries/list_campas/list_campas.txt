@@ -1,0 +1,3 @@
+SELECT * 
+FROM sales_management.dim_campaigns
+WHERE idcampaña in (228,233,232,240);

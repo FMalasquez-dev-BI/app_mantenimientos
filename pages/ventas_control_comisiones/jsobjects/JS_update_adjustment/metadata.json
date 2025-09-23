@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68bf46d3c4f12e2bf17c39f9_1f3e870b-7d1a-46ac-8f71-ca95dcfe0942",
+  "id": "ventas_control_comisiones_JS_update_adjustment",
+  "unpublishedCollection": {
+    "name": "JS_update_adjustment",
+    "pageId": "ventas_control_comisiones",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

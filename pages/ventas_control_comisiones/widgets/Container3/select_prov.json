@@ -1,0 +1,62 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "l9gnh6ywuy",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Proveedor",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 13.037037037037036,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 25,
+  "mobileRightColumn": 45,
+  "mobileTopRow": 13,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 19,
+  "originalTopRow": 12,
+  "parentColumnSpace": 3.796875,
+  "parentId": "9o6e4ulvpp",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 26.074074074074073,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"SOLIVESA\",\n    \"code\": \"SOLIVESA\"\n  },\n  {\n    \"name\": \"CODEX\",\n    \"code\": \"CODEX\"\n  },\n  {\n    \"name\": \"LEYASH\",\n    \"code\": \"LEYASH\"\n  },\n\t  {\n    \"name\": \"ICCPN\",\n    \"code\": \"ICCPN\"\n  }\n]",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "b3x084kojw",
+  "widgetName": "select_prov"
+}

@@ -1,0 +1,75 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "bottomRowBeforeCollapse": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{!!lst_campas.selectedItem}}",
+  "key": "el2uerez64",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "SEGMENTO GESTIÓN",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 26,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 19,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "onOptionChange": "",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 7,
+  "originalTopRow": 0,
+  "parentColumnSpace": 4.21875,
+  "parentId": "j742ny1vx0",
+  "parentRowSpace": 10,
+  "placeholderText": "Filtrar",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 39,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"PRE CIERRE\",\n    \"value\": \"PRE CIERRE\"\n  },\n  {\n    \"label\": \"RECUPERACION\",\n    \"value\": \"RECUPERACION\"\n  },\n  {\n    \"label\": \"CIERRE COMPLETO\",\n    \"value\": \"CIERRE COMPLETO\"\n  },\n  {\n    \"label\": \"GESTION BO\",\n    \"value\": \"GESTION BO\"\n  },\n  {\n    \"label\": \"GESTION SISTEMA\",\n    \"value\": \"GESTION SISTEMA\"\n  },\n  {\n    \"label\": \"GESTION SUP\",\n    \"value\": \"GESTION SUP\"\n  },\n  {\n    \"label\": \"SIN SEGMENTO\",\n    \"value\": \"SIN SEGMENTO\"\n  },\n  {\n    \"label\": \"CANCELADO\",\n    \"value\": \"CANCELADO\"\n  },\n\t\n\t  {\n    \"label\": \"PENDIENTE\",\n    \"value\": \"PENDIENTE\"\n  }\n\t\n]",
+  "topRow": 0,
+  "topRowBeforeCollapse": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "6s5nkft3vr",
+  "widgetName": "selfilt_seg_gest"
+}

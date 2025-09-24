@@ -59,7 +59,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 48,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"label\": \"PRE CIERRE\",\n    \"value\": \"PRE CIERRE\"\n  },\n  {\n    \"label\": \"RECUPERACION\",\n    \"value\": \"RECUPERACION\"\n  },\n  {\n    \"label\": \"CIERRE COMPLETO\",\n    \"value\": \"CIERRE COMPLETO\"\n  },\n  {\n    \"label\": \"GESTION BO\",\n    \"value\": \"GESTION BO\"\n  },\n  {\n    \"label\": \"GESTION SISTEMA\",\n    \"value\": \"GESTION SISTEMA\"\n  },\n  {\n    \"label\": \"GESTION SUP\",\n    \"value\": \"GESTION SUP\"\n  },\n  {\n    \"label\": \"SIN SEGMENTO\",\n    \"value\": \"SIN SEGMENTO\"\n  },\n  {\n    \"label\": \"CANCELADO\",\n    \"value\": \"CANCELADO\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"label\": \"PRE CIERRE\",\n    \"value\": \"PRE CIERRE\"\n  },\n  {\n    \"label\": \"RECUPERACION\",\n    \"value\": \"RECUPERACION\"\n  },\n  {\n    \"label\": \"CIERRE COMPLETO\",\n    \"value\": \"CIERRE COMPLETO\"\n  },\n  {\n    \"label\": \"GESTION BO\",\n    \"value\": \"GESTION BO\"\n  },\n  {\n    \"label\": \"GESTION SISTEMA\",\n    \"value\": \"GESTION SISTEMA\"\n  },\n  {\n    \"label\": \"GESTION SUP\",\n    \"value\": \"GESTION SUP\"\n  },\n  {\n    \"label\": \"PENDIENTE\",\n    \"value\": \"PENDIENTE\"\n  },\n  {\n    \"label\": \"CANCELADO\",\n    \"value\": \"CANCELADO\"\n  }\n]",
   "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,

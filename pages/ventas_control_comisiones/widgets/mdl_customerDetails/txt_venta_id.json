@@ -53,7 +53,7 @@
   ],
   "shouldScrollContents": true,
   "shouldTruncate": false,
-  "text": "Venta ID: {{appsmith.store.selected_sale.codigo_crm_cliente}}",
+  "text": "Codigo Proveedor: {{appsmith.store.selected_sale.codigo_crm_cliente}} ➖ Venta ID CRM GSI: {{appsmith.store.selected_sale.manage_id}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,

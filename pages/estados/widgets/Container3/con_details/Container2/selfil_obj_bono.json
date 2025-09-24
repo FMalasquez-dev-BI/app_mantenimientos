@@ -56,7 +56,7 @@
   "placeholderText": "Filtrar",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "[\n  {\n    \"label\": \"NO APLICA\",\n    \"value\": \"NO APLICA\"\n  },\n  {\n    \"label\": \"PENDIENTE\",\n    \"value\": \"PENDIENTE\"\n  },\n  {\n    \"label\": \"SI APLICA\",\n    \"value\": \"SI APLICA\"\n  }\n]",
   "topRow": 0,

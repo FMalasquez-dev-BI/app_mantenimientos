@@ -26,20 +26,8 @@
   "evaluationVersion": 2,
   "pages": [
     {
-      "id": "Login",
-      "isDefault": true
-    },
-    {
-      "id": "Orders",
-      "isDefault": false
-    },
-    {
       "id": "ventas_control_comisiones",
-      "isDefault": false
-    },
-    {
-      "id": "Returns",
-      "isDefault": false
+      "isDefault": true
     },
     {
       "id": "gestion_metas",
@@ -47,10 +35,6 @@
     },
     {
       "id": "estados",
-      "isDefault": false
-    },
-    {
-      "id": "User Managment",
       "isDefault": false
     }
   ],

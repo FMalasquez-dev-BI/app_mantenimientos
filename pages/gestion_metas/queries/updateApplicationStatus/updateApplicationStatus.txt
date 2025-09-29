@@ -1,3 +1,0 @@
-UPDATE loan_application
-  SET status = {{this.params.status}}
-  WHERE id = {{ tbl_coplaboradores.selectedRow.Id }};

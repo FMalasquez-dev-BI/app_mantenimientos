@@ -1,2 +1,0 @@
-SELECT * FROM loan_application
-ORDER BY id ASC;

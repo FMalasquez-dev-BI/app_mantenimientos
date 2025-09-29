@@ -1,5 +1,0 @@
-UPDATE loan_application
-  SET status = 'Approved',
-		amount_offered = {{cur_amountOffered.value}},
-		comment = {{inp_comments.text}}
-  	WHERE id = {{ tbl_coplaboradores.selectedRow.Id }};

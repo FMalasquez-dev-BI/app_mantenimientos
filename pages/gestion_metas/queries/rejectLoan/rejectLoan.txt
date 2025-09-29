@@ -1,4 +1,0 @@
-UPDATE loan_application
-  SET status = 'Rejected',
-	reason = {{inp_rejectReason.text}}
-  WHERE id = {{ tbl_coplaboradores.selectedRow.Id }};

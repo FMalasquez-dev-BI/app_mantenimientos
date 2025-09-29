@@ -1,2 +1,0 @@
-SELECT DISTINCT area_empresa
-FROM public."dim_nomina_coorporacion" LIMIT 10;

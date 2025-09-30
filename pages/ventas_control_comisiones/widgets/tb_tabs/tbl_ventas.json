@@ -36,8 +36,8 @@
     "customColumn1",
     "customColumn2",
     "fecha_liquidacion",
-    "fecha_liquidacion_impacto",
     "fecha_descuento",
+    "fecha_liquidacion_impacto",
     "fecha_descomision",
     "dni_cliente",
     "codigo_crm_cliente",
@@ -71,7 +71,7 @@
     "cod_unico_corte",
     "user_name"
   ],
-  "columnUpdatedAt": 1758456451907,
+  "columnUpdatedAt": 1759238454663,
   "columnWidthMap": {
     "BillingAddress": 212,
     "CustomerID": 93,
@@ -768,7 +768,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Impacto Descomision",
       "notation": "standard",
       "originalId": "fecha_descomision",

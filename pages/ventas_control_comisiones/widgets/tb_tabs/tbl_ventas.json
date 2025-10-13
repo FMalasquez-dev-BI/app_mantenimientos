@@ -69,9 +69,10 @@
     "total_active_sales_for_group",
     "liquidacion",
     "cod_unico_corte",
-    "user_name"
+    "user_name",
+    "observacion"
   ],
-  "columnUpdatedAt": 1759238454663,
+  "columnUpdatedAt": 1760386873756,
   "columnWidthMap": {
     "BillingAddress": 212,
     "CustomerID": 93,
@@ -249,6 +250,9 @@
     },
     {
       "key": "totalRecordsCount"
+    },
+    {
+      "key": "primaryColumns.observacion.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1395,6 +1399,40 @@
       "label": "Nombre Apellido",
       "notation": "standard",
       "originalId": "nombre_completo",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "observacion": {
+      "alias": "observacion",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_ventas.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"observacion\"])) : observacion })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "observacion",
+      "index": 35,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "observacion",
+      "notation": "standard",
+      "originalId": "observacion",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

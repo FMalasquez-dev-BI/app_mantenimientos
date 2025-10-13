@@ -31,7 +31,9 @@ a.fecha_liquidacion_impacto,
     a.estado,
    a.liquidacion,
  CONCAT(a.idcampa, '-', a.fecha_liquidacion_impacto, '-', a.proveedor) AS cod_unico_corte ,
-b.date_edit AS ultima_edicion
+b.date_edit AS ultima_edicion,
+	observacion,
+	a.commision_adjustment
 FROM vw_total_comisiones_alarmas a
 INNER JOIN sales_management.fact_sales b ON b.manage_id = a.manage_id 
 
@@ -69,15 +71,15 @@ indicador,
 estado,
 liquidacion,
 cod_unico_corte, -- <--- Casting this column to TEXT
-ultima_edicion
+ultima_edicion,
+	observacion,
+	commision_adjustment
 FROM test_ong_comisiones -- vw_total_comisiones_ong)
 ),
 cte_main_2 AS (
-SELECT a.*, b.nombre_completo,
-CASE WHEN d.sale_id IS NULL THEN 0 ELSE 1 END AS commision_adjustment
+SELECT a.*, b.nombre_completo
 FROM cte_main a 
 LEFT JOIN sales_management.dim_customers b ON a.manage_id = b.manage_id
-LEFT JOIN commission_management.commission_adjustments d ON a.manage_id = d.sale_id AND d.status = 1
 WHERE idcampa = {{List1.selectedItem.idcampaña}})
 SELECT a.*, b.user_name
 FROM cte_main_2 a

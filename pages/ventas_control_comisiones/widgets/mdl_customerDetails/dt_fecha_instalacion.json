@@ -2,12 +2,12 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 11,
   "boxShadow": "none",
   "closeOnSelection": true,
   "dateFormat": "YYYY-MM-DD",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{appsmith.store.selected_sale.fecha_descuento}}",
+  "defaultDate": "{{appsmith.store.selected_sale.fecha_instalacion}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -32,12 +32,12 @@
   "isRequired": false,
   "isVisible": true,
   "key": "qgzslzz44s",
-  "label": "Fecha Descomision",
+  "label": "Fecha Instalación",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 21,
+  "leftColumn": 41,
   "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
   "minDate": "1920-12-31T18:30:00.000Z",
@@ -53,12 +53,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
+  "rightColumn": 61,
   "shortcuts": false,
   "timePrecision": "minute",
-  "topRow": 11,
+  "topRow": 4,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "zhn1mfhgtn",
-  "widgetName": "dt_fecha_activacionCopy2"
+  "widgetId": "fgz6lpfrif",
+  "widgetName": "dt_fecha_instalacion"
 }

@@ -35,7 +35,7 @@
   "mobileRightColumn": 40,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{list_ventas_2.run()}}",
+  "onClick": "{{list_ventas_2.run();\nquery_comisiones_chart.run()}}",
   "parentColumnSpace": 0.703125,
   "parentId": "amipceyw6y",
   "parentRowSpace": 10,

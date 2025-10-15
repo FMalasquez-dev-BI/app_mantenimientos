@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "68bf46d3c4f12e2bf17c39f9_edd7b8af-7dcf-4767-80ef-a3df2c63ecee",
+  "id": "ventas_control_comisiones_auto_refresh",
+  "unpublishedCollection": {
+    "name": "auto_refresh",
+    "pageId": "ventas_control_comisiones",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "intervalId",
+        "value": "null"
+      }
+    ]
+  }
+}

@@ -21,7 +21,7 @@ SELECT
     ) AS pendientes_amount
 FROM
     sales_management.dim_states a
-WHERE a.idcampa IN (240,233,228,213,89)
+WHERE a.idcampa IN (240,233,228,213,89, 235)
 GROUP BY
     a.idcampa
 ORDER BY

@@ -3,6 +3,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
+  "bottomRowBeforeCollapse": 7,
   "boxShadow": "none",
   "defaultOptionValue": "COMISION",
   "displayName": "Select",
@@ -12,12 +13,18 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -32,7 +39,7 @@
   "isFilterable": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "{{!['Liquidaciones'].includes(tb_tabs.selectedTab) }}",
   "key": "emek2xtv55",
   "labelAlignment": "left",
   "labelPosition": "Top",
@@ -46,8 +53,8 @@
   "onOptionChange": "{{removeValue(\"\")}}",
   "optionLabel": "label",
   "optionValue": "value",
-  "originalBottomRow": 19,
-  "originalTopRow": 12,
+  "originalBottomRow": 7,
+  "originalTopRow": 0,
   "parentColumnSpace": 3.796875,
   "parentId": "9o6e4ulvpp",
   "parentRowSpace": 10,
@@ -58,8 +65,10 @@
     "dropdown"
   ],
   "serverSideFiltering": false,
-  "sourceData": "[\n{\"label\": \"SIN COMISIONAR\",\n\"value\": \"SIN COMISIONAR\"},\n\n{\"label\": \"COMISION\",\n\"value\": \"COMISION\"},\n\n{\"label\": \"DESCOMISION\",\n\"value\": \"DESCOMISION\"},\n\n{\"label\": \"IMPAGO\",\n\"value\": \"IMPAGO\"},\n\n{\"label\": \"IMPAGO_REGULARIZADO\",\n\"value\": \"IMPAGO_REGULARIZADO\"},\n\n{\"label\": \"PROYECCION COMISION\",\n\"value\": \"PROYECCION COMISION\"},\n{\"label\": \"PROYECCION DESCOMISION\",\n\"value\": \"PROYECCION DESCOMISION\"},\n\n{\"label\": \"COMISION SIN AFECTO\",\n\"value\": \"COMISION SIN AFECTO\"},\n\n{\"label\": \"COLCHON\",\n\"value\": \"COLCHON\"}\n\n\n]",
+  "shouldScrollContents": true,
+  "sourceData": "[\n{\"label\": \"SIN COMISIONAR\",\n\"value\": \"SIN COMISIONAR\"},\n\n{\"label\": \"COMISION\",\n\"value\": \"COMISION\"},\n\n{\"label\": \"DESCOMISION\",\n\"value\": \"DESCOMISION\"},\n\n{\"label\": \"IMPAGO\",\n\"value\": \"IMPAGO\"},\n\n{\"label\": \"IMPAGO_REGULARIZADO\",\n\"value\": \"IMPAGO_REGULARIZADO\"},\n\n{\"label\": \"PROYECCION COMISION\",\n\"value\": \"PROYECCION COMISION\"},\n{\"label\": \"PROYECCION DESCOMISION\",\n\"value\": \"PROYECCION DESCOMISION\"},\n\n{\"label\": \"COMISION SIN AFECTO\",\n\"value\": \"COMISION SIN AFECTO\"},\n\n{\"label\": \"COLCHON\",\n\"value\": \"COLCHON\"},\n\n{\"label\": \"DESCUENTO GENERAL\",\n\"value\": \"DESCUENTO GENERAL\"},\n\n{\"label\": \"COMISION ADICIONAL\",\n\"value\": \"COMISION ADICIONAL\"}\n\n]",
   "topRow": 0,
+  "topRowBeforeCollapse": 0,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "chi8f6dz46",

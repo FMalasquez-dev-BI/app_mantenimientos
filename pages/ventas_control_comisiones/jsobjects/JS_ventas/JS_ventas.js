@@ -9,5 +9,5 @@ export default {
       const f4 = !sel_ajustes.selectedOptionValue || row.commision_adjustment == sel_ajustes.selectedOptionValue;
       return f1 && f2 && f3 && f4;
     });
-  }
+  },
 };

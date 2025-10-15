@@ -13,7 +13,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
@@ -32,7 +32,7 @@
   "labelText": "Proveedor",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 13.037037037037036,
+  "leftColumn": 12,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -43,16 +43,17 @@
   "needsErrorInfo": false,
   "optionLabel": "name",
   "optionValue": "code",
-  "originalBottomRow": 19,
-  "originalTopRow": 12,
+  "originalBottomRow": 7,
+  "originalTopRow": 0,
   "parentColumnSpace": 3.796875,
   "parentId": "9o6e4ulvpp",
   "parentRowSpace": 10,
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 26.074074074074073,
+  "rightColumn": 26,
   "serverSideFiltering": false,
+  "shouldScrollContents": true,
   "sourceData": "[\n  {\n    \"name\": \"SOLIVESA\",\n    \"code\": \"SOLIVESA\"\n  },\n  {\n    \"name\": \"CODEX\",\n    \"code\": \"CODEX\"\n  },\n  {\n    \"name\": \"LEYASH\",\n    \"code\": \"LEYASH\"\n  },\n\t  {\n    \"name\": \"ICCPN\",\n    \"code\": \"ICCPN\"\n  }\n]",
   "topRow": 0,
   "type": "SELECT_WIDGET",

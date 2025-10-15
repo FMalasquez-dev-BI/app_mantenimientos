@@ -109,7 +109,7 @@
   "mobileRightColumn": 6,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "onItemClick": "{{JS_ventas.venta_applyFilters();}}",
+  "onItemClick": "{{list_ventas_2.run();\nquery_comisiones_chart.run();\nquery_liquidaciones.run()}}",
   "originalBottomRow": 66,
   "originalTopRow": 5,
   "pageSize": 5,

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT b.nombrecampaña, a.idestado, a.estado, a.ranking, a.segmento_gestion, a.recuperable, a.objetivo_bono, a.liquidacion, a.comision, a.bonos, a.salida_anticipada, a.condicionamiento, a.proceso_alta, a.fecha_actualizado, a.status\nFROM sales_management.dim_states a \nINNER JOIN sales_management.dim_campaigns b ON b.idcampaña = a.idcampa\nWHERE idcampa IN (240,233,228,213,89);",
+      "body": "SELECT b.nombrecampaña, a.idestado, a.estado, a.ranking, a.segmento_gestion, a.recuperable, a.objetivo_bono, a.liquidacion, a.comision, a.bonos, a.salida_anticipada, a.condicionamiento, a.proceso_alta, a.fecha_actualizado, a.status\nFROM sales_management.dim_states a \nINNER JOIN sales_management.dim_campaigns b ON b.idcampaña = a.idcampa\nWHERE idcampa IN (240,233,228,213,89,235);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

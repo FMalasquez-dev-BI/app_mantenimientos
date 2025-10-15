@@ -1,4 +1,4 @@
 SELECT b.nombrecampaña, a.idestado, a.estado, a.ranking, a.segmento_gestion, a.recuperable, a.objetivo_bono, a.liquidacion, a.comision, a.bonos, a.salida_anticipada, a.condicionamiento, a.proceso_alta, a.fecha_actualizado, a.status
 FROM sales_management.dim_states a 
 INNER JOIN sales_management.dim_campaigns b ON b.idcampaña = a.idcampa
-WHERE idcampa IN (240,233,228,213,89);
+WHERE idcampa IN (240,233,228,213,89,235);

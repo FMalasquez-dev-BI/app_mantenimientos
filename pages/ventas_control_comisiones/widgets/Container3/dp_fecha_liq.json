@@ -3,6 +3,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
+  "bottomRowBeforeCollapse": 7,
   "boxShadow": "none",
   "closeOnSelection": true,
   "dateFormat": "YYYY-MM-DD",
@@ -14,12 +15,18 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "defaultDate"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -27,7 +34,7 @@
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "{{!['Resumen', 'Liquidaciones'].includes(tb_tabs.selectedTab) }}",
   "key": "qgzslzz44s",
   "label": "Fecha Liquidacion - CRM",
   "labelAlignment": "left",
@@ -46,17 +53,19 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "originalBottomRow": 19,
-  "originalTopRow": 12,
+  "originalBottomRow": 7,
+  "originalTopRow": 0,
   "parentColumnSpace": 3.796875,
   "parentId": "9o6e4ulvpp",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 13.037037037037036,
+  "rightColumn": 12,
   "shortcuts": false,
+  "shouldScrollContents": true,
   "timePrecision": "None",
   "topRow": 0,
+  "topRowBeforeCollapse": 0,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
   "widgetId": "pmqqxl8j78",

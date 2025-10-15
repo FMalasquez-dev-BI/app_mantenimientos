@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
   "bottomRow": 64,
-  "bottomRowBeforeCollapse": 60,
+  "bottomRowBeforeCollapse": 64,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -716,7 +716,7 @@
   "tableData": "{{JS_estado_list.applyFilters()}}",
   "textSize": "0.875rem",
   "topRow": 28,
-  "topRowBeforeCollapse": 24,
+  "topRowBeforeCollapse": 28,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 1,

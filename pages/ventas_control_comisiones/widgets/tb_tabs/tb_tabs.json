@@ -5,12 +5,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 72,
+  "bottomRow": 74,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 500,
+      "bottomRow": 520,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -56,7 +56,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 500,
+      "bottomRow": 520,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -93,12 +93,57 @@
       "rightColumn": 430.5,
       "shouldScrollContents": false,
       "tabId": "tab2",
-      "tabName": "Totales",
+      "tabName": "Resumen",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
       "widgetId": "lrnpal6kjw",
       "widgetName": "Canvas15"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 520,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "n96surxjf5",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 560,
+      "minWidth": 450,
+      "mobileBottomRow": 561,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 968.625,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "aj0kls423m",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 968.625,
+      "tabId": "tabw2z7ikj26x",
+      "tabName": "Liquidaciones",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "gcanmpt92o",
+      "widgetName": "Canvas18"
     }
   ],
   "defaultTab": "Ventas",
@@ -129,7 +174,7 @@
   "mobileRightColumn": 32,
   "mobileTopRow": 17,
   "needsErrorInfo": false,
-  "originalBottomRow": 72,
+  "originalBottomRow": 74,
   "originalTopRow": 18,
   "parentColumnSpace": 17.9375,
   "parentId": "0",
@@ -151,10 +196,17 @@
     "tab2": {
       "id": "tab2",
       "index": 1,
-      "isVisible": false,
-      "label": "Totales",
+      "isVisible": true,
+      "label": "Resumen",
       "positioning": "vertical",
       "widgetId": "lrnpal6kjw"
+    },
+    "tabw2z7ikj26x": {
+      "id": "tabw2z7ikj26x",
+      "index": 2,
+      "isVisible": true,
+      "label": "Liquidaciones",
+      "widgetId": "gcanmpt92o"
     }
   },
   "topRow": 18,

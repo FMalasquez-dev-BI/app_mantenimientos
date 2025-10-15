@@ -2,21 +2,28 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 0,
+  "bottomRowBeforeCollapse": 7,
   "boxShadow": "none",
-  "defaultOptionValue": "GREEN",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -24,7 +31,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "{{!['Resumen', 'Liquidaciones'].includes(tb_tabs.selectedTab) }}",
   "key": "l9gnh6ywuy",
   "labelAlignment": "left",
   "labelPosition": "Top",
@@ -43,8 +50,8 @@
   "needsErrorInfo": false,
   "optionLabel": "label",
   "optionValue": "value",
-  "originalBottomRow": 80,
-  "originalTopRow": 73,
+  "originalBottomRow": 0,
+  "originalTopRow": 0,
   "parentColumnSpace": 3.796875,
   "parentId": "9o6e4ulvpp",
   "parentRowSpace": 10,
@@ -53,8 +60,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "serverSideFiltering": false,
+  "shouldScrollContents": true,
   "sourceData": "[\n{\"label\": \"AJUSTADO\",\n\"value\": 1},\n\n{\"label\": \"SIN AJUSTAR\",\n\"value\": 0}\n\n]",
   "topRow": 0,
+  "topRowBeforeCollapse": 0,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "mmzzfeacl3",

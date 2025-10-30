@@ -32,6 +32,10 @@
     {
       "id": "estados",
       "isDefault": false
+    },
+    {
+      "id": "Commission_management.tb_commission_rules",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

@@ -1,0 +1,2 @@
+DELETE FROM commission_management."tb_commission_rules"
+  WHERE "commission_id" = {{data_table.triggeredRow.commission_id}};

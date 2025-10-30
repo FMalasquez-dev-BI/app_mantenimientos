@@ -1,0 +1,13 @@
+UPDATE commission_management."tb_commission_rules" SET
+		"vendor" = '{{update_form.fieldState.vendor.isVisible ? update_form.formData.vendor : update_form.sourceData.vendor}}',
+		"campaign_id" = '{{update_form.fieldState.campaign_id.isVisible ? update_form.formData.campaign_id : update_form.sourceData.campaign_id}}',
+    "rate_type" = '{{update_form.fieldState.rate_type.isVisible ? update_form.formData.rate_type : update_form.sourceData.rate_type}}',
+		"amount" = '{{update_form.fieldState.amount.isVisible ? update_form.formData.amount : update_form.sourceData.amount}}',
+		"start_date" = '{{update_form.fieldState.start_date.isVisible ? update_form.formData.start_date : update_form.sourceData.start_date}}',
+		"end_date" = '{{update_form.fieldState.end_date.isVisible ? update_form.formData.end_date : update_form.sourceData.end_date}}',
+		"clawback_months" = '{{update_form.fieldState.clawback_months.isVisible ? update_form.formData.clawback_months : update_form.sourceData.clawback_months}}',
+		"condition_type" = '{{update_form.fieldState.condition_type.isVisible ? update_form.formData.condition_type : update_form.sourceData.condition_type}}',
+		"product_type" = '{{update_form.fieldState.product_type.isVisible ? update_form.formData.product_type : update_form.sourceData.product_type}}',
+		"min_volume" = '{{update_form.fieldState.min_volume.isVisible ? update_form.formData.min_volume : update_form.sourceData.min_volume}}',
+		"max_volume" = '{{update_form.fieldState.max_volume.isVisible ? update_form.formData.max_volume : update_form.sourceData.max_volume}}'
+	WHERE "commission_id" = {{data_table.selectedRow.commission_id}};

@@ -1,0 +1,26 @@
+INSERT INTO commission_management."tb_commission_rules" (
+	"vendor",
+	"campaign_id",
+	"rate_type",
+	"amount",
+	"start_date",
+	"end_date",
+	"clawback_months",
+	"condition_type",
+	"product_type",
+	"min_volume",
+	"max_volume"
+)
+VALUES (
+	'{{insert_form.formData.vendor}}',
+	'{{insert_form.formData.campaign_id}}',
+	'{{insert_form.formData.rate_type}}',
+	'{{insert_form.formData.amount}}',
+	'{{insert_form.formData.start_date}}',
+	'{{insert_form.formData.end_date}}',
+	'{{insert_form.formData.clawback_months}}',
+	'{{insert_form.formData.condition_type}}',
+	'{{insert_form.formData.product_type}}',
+	'{{insert_form.formData.min_volume}}',
+	'{{insert_form.formData.max_volume}}'
+);

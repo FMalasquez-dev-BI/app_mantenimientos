@@ -75,6 +75,12 @@ ultima_edicion,
 	observacion,
 	commision_adjustment
 FROM test_ong_comisiones -- vw_total_comisiones_ong)
+UNION ALL
+	SELECT *
+	FROM commission_management.vw_commission_enerco
+UNION ALL
+	SELECT *
+	FROM commission_management.vw_commission_naturgy_omnicanal
 ),
 cte_main_2 AS (
 SELECT a.*, b.nombre_completo

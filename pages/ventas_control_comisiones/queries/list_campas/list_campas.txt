@@ -1,3 +1,4 @@
 SELECT * 
 FROM sales_management.dim_campaigns
-WHERE idcampaña in (228,233,232,240);
+WHERE cartera = ANY({{MultiSelect1.selectedOptionValues}})
+AND state_report = 1;

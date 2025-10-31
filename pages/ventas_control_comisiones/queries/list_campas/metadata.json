@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * \nFROM sales_management.dim_campaigns\nWHERE idcampaña in (228,233,232,240);",
+      "body": "SELECT * \nFROM sales_management.dim_campaigns\nWHERE cartera = ANY({{MultiSelect1.selectedOptionValues}})\nAND state_report = 1;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,7 +22,11 @@
       "name": "bi_dimension",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "list_campas",
     "pageId": "ventas_control_comisiones",
     "runBehaviour": "AUTOMATIC",

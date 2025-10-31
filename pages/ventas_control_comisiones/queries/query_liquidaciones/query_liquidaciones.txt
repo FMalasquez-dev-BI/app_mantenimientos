@@ -1,107 +1,114 @@
 WITH cte_main AS (
-    SELECT 
-        a.manage_id,
-        a.id_nomina,
-        a.idcampa,
-        a.proveedor,
-        a.auditor,
-        a.fecha_registro,
-        a.fecha_liquidacion,
-        a.fecha_descuento,
-        a.fecha_activacion_vigente,
-        a.fecha_desconexion_vigente,
-        a.fecha_vigente,
-        a.fecha_instalacion,
-        a.idestado_actual,
-        a.id_ult_estado_cierre_mes_creacion,
-        a.codigo_crm_cliente,
-        a.dni_cliente,
-        a.tpo_servicio,
-        a.meses_diferencia,
-        a.fecha_comision,
-        a.fecha_descomision,
-        a.total_active_sales_for_group,
-        a.monto,
-        a.id_comision,
-        a.prod_adicionales,
-        a.comision_original,
-        a.comision_total,
-        a.fecha_liquidacion_impacto,
-        a.indicador,
-        a.estado,
-        a.liquidacion,
-        CONCAT(a.idcampa::TEXT, '-', a.fecha_liquidacion_impacto::TEXT, '-', a.proveedor::TEXT) AS cod_unico_corte,
-        b.date_edit AS ultima_edicion,
-        a.observacion,
-        a.commision_adjustment
-    FROM vw_total_comisiones_alarmas a
-    INNER JOIN sales_management.fact_sales b ON b.manage_id = a.manage_id
+	SELECT 
+	a.manage_id,
+	a.id_nomina,
+	a.idcampa,
+	a.proveedor,
+	a.auditor,
+	a.fecha_registro,
+	a.fecha_liquidacion,
+	a.fecha_descuento,
+	a.fecha_activacion_vigente,
+	a.fecha_desconexion_vigente,
+	a.fecha_vigente,
+	a.fecha_instalacion,
+	a.idestado_actual,
+	a.id_ult_estado_cierre_mes_creacion,
+	a.codigo_crm_cliente,
+	a.dni_cliente,
+	a.tpo_servicio,
+	a.meses_diferencia,
+	a.fecha_comision,
+	a.fecha_descomision,
+	a.total_active_sales_for_group,
+	a.monto,
+	a.id_comision,
+	a.prod_adicionales,
+	a.comision_original,
+	a.comision_total,
+	a.fecha_liquidacion_impacto,
+	a.indicador,
+	a.estado,
+	a.liquidacion,
+	CONCAT(a.idcampa::TEXT, '-', a.fecha_liquidacion_impacto::TEXT, '-', a.proveedor::TEXT) AS cod_unico_corte,
+	b.date_edit AS ultima_edicion,
+	a.observacion,
+	a.commision_adjustment
+	FROM vw_total_comisiones_alarmas a
+	INNER JOIN sales_management.fact_sales b ON b.manage_id = a.manage_id
 
-    UNION ALL
+	UNION ALL
 
-    SELECT
-        manage_id,
-        id_nomina,
-        idcampa,
-        proveedor,
-        auditor,
-        fecha_registro,
-        fecha_liquidacion,
-        fecha_descuento,
-        fecha_activacion_vigente,
-        fecha_desconexion_vigente,
-        fecha_vigente,
-        NULL::DATE AS fecha_instalacion,
-        idestado_actual,
-        id_ult_estado_cierre_mes_creacion,
-        codigo_crm_cliente,
-        dni_cliente,
-        tpo_servicio,
-        meses_diferencia,
-        fecha_comision,
-        fecha_descomision,
-        total_active_sales_for_group,
-        monto,
-        id_comision,
-        prod_adicionales,
-        comision_total AS comision_original,
-        comision_total_ajustada AS comision_total,
-        fecha_liquidacion_impacto,
-        indicador,
-        estado,
-        liquidacion,
-        cod_unico_corte::TEXT,
-        ultima_edicion,
-        observacion,
-        commision_adjustment
-    FROM test_ong_comisiones
+	SELECT
+	manage_id,
+	id_nomina,
+	idcampa,
+	proveedor,
+	auditor,
+	fecha_registro,
+	fecha_liquidacion,
+	fecha_descuento,
+	fecha_activacion_vigente,
+	fecha_desconexion_vigente,
+	fecha_vigente,
+	NULL::DATE AS fecha_instalacion,
+	idestado_actual,
+	id_ult_estado_cierre_mes_creacion,
+	codigo_crm_cliente,
+	dni_cliente,
+	tpo_servicio,
+	meses_diferencia,
+	fecha_comision,
+	fecha_descomision,
+	total_active_sales_for_group,
+	monto,
+	id_comision,
+	prod_adicionales,
+	comision_total AS comision_original,
+	comision_total_ajustada AS comision_total,
+	fecha_liquidacion_impacto,
+	indicador,
+	estado,
+	liquidacion,
+	cod_unico_corte::TEXT,
+	ultima_edicion,
+	observacion,
+	commision_adjustment
+	FROM test_ong_comisiones
+	UNION ALL
+	SELECT *
+	FROM commission_management.vw_commission_enerco
+	UNION ALL
+	SELECT *
+	FROM commission_management.vw_commission_naturgy_omnicanal
+
 ),
 cte_main_2 AS (
-    SELECT a.*
-    FROM cte_main a
-    WHERE a.idcampa = {{List1.selectedItem.idcampaña}}
+	SELECT a.*
+	FROM cte_main a
+	WHERE a.idcampa = {{List1.selectedItem.idcampaña}}
 ),
 cte_aggregated AS (
-    SELECT 
-        fecha_liquidacion_impacto,
-        proveedor,
-        SUM(CASE WHEN indicador = 'COMISION' THEN COALESCE(comision_total,0) ELSE 0 END) AS comision,
-        SUM(CASE WHEN indicador = 'DESCOMISION' THEN COALESCE(comision_total,0) ELSE 0 END) AS descomision,
-        SUM(CASE WHEN indicador = 'IMPAGO' THEN COALESCE(comision_total,0) ELSE 0 END) AS impago,
-        SUM(CASE WHEN indicador = 'IMPAGO_REGULARIZADO' THEN COALESCE(comision_total,0) ELSE 0 END) AS impago_regularizado,
-        SUM(CASE WHEN indicador = 'DESCUENTO GENERAL' THEN COALESCE(comision_total,0) ELSE 0 END) AS descuento_general,
-        SUM(CASE WHEN indicador = 'COMISION ADICIONAL' THEN COALESCE(comision_total,0) ELSE 0 END) AS comision_adicional
-    FROM cte_main_2
-    GROUP BY fecha_liquidacion_impacto, proveedor
+	SELECT 
+	fecha_liquidacion_impacto,
+	proveedor,
+	SUM(CASE WHEN indicador = 'COMISION' THEN COALESCE(comision_total,0) ELSE 0 END) AS comision,
+	SUM(CASE WHEN indicador = 'DESCOMISION' THEN COALESCE(comision_total,0) ELSE 0 END) AS descomision,
+	SUM(CASE WHEN indicador = 'IMPAGO' THEN COALESCE(comision_total,0) ELSE 0 END) AS impago,
+	SUM(CASE WHEN indicador = 'IMPAGO_REGULARIZADO' THEN COALESCE(comision_total,0) ELSE 0 END) AS impago_regularizado,
+	SUM(CASE WHEN indicador = 'DESCUENTO GENERAL' THEN COALESCE(comision_total,0) ELSE 0 END) AS descuento_general,
+	SUM(CASE WHEN indicador = 'COMISION ADICIONAL' THEN COALESCE(comision_total,0) ELSE 0 END) AS comision_adicional
+	FROM cte_main_2
+	GROUP BY fecha_liquidacion_impacto, proveedor
 )
 SELECT 
     fecha_liquidacion_impacto,
     proveedor,
     (comision 
-     - descomision 
-     - impago 
-     + impago_regularizado 
-     - descuento_general 
-     + comision_adicional) AS liquidacion_total
+		 - descomision 
+		 - impago 
+		 + impago_regularizado 
+		 - descuento_general 
+		 + comision_adicional) AS liquidacion_total
 FROM cte_aggregated
 ORDER BY fecha_liquidacion_impacto, proveedor;

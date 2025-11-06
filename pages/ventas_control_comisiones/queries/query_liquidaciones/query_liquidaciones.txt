@@ -81,6 +81,10 @@ WITH cte_main AS (
 	UNION ALL
 	SELECT *
 	FROM commission_management.vw_commission_naturgy_omnicanal
+	UNION ALL
+	SELECT *
+	FROM 
+	commission_management.vw_commission_energia_repsol
 
 ),
 cte_main_2 AS (

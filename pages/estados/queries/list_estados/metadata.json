@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT a.idestado, a.estado, a.ranking, a.segmento_gestion, \n a.recuperable, a.objetivo_bono, a.liquidacion, a.comision, a.bonos, a.salida_anticipada, a.condicionamiento, a.proceso_alta, a.fecha_actualizado, a.status\nFROM sales_management.dim_states a \nWHERE idcampa = {{lst_campas.triggeredItem.idcampa}};",
+      "body": "SELECT a.idestado, a.estado, a.ranking, a.segmento_gestion, \n a.recuperable, a.objetivo_bono, a.liquidacion, a.comision, a.bonos, a.salida_anticipada, a.condicionamiento, a.proceso_alta, a.fecha_actualizado, a.status\nFROM sales_management.dim_states a \nWHERE idcampa = {{lst_campas.triggeredItem.idcampa}}\nAND status = 1;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -231,6 +231,15 @@
     },
     {
       "key": "schema.__root_schema__.children.update_at.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_consumption.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_consumption.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_consumption.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -408,6 +417,27 @@
           "sourceData": "2025-12-31",
           "timePrecision": "minute"
         },
+        "id_consumption": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "id_consumption",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.id_consumption))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "id_consumption",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Id Consumption",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "id_consumption",
+          "position": 12
+        },
         "max_volume": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "accessor": "max_volume",
@@ -427,8 +457,7 @@
           "label": "Max Volume",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "max_volume",
-          "position": 10,
-          "sourceData": null
+          "position": 10
         },
         "min_volume": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",

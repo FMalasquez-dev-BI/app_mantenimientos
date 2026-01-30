@@ -35,6 +35,7 @@
     "min_volume",
     "max_volume",
     "update_at",
+    "id_consumption",
     "customColumn1"
   ],
   "columnSizeMap": {
@@ -42,7 +43,7 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1761165167957,
+  "columnUpdatedAt": 1764299675111,
   "columnWidthMap": {
     "rate_type": 244
   },
@@ -135,6 +136,9 @@
     },
     {
       "key": "primaryColumns.update_at.computedValue"
+    },
+    {
+      "key": "primaryColumns.id_consumption.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -405,6 +409,40 @@
       "notation": "standard",
       "originalId": "end_date",
       "outputFormat": "YYYY-MM-DD",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id_consumption": {
+      "alias": "id_consumption",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id_consumption\"])) : id_consumption })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id_consumption",
+      "index": 13,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "id_consumption",
+      "notation": "standard",
+      "originalId": "id_consumption",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

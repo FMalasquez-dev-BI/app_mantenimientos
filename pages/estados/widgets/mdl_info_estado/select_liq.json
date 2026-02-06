@@ -62,7 +62,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 30,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"label\": \"PROYECCION\",\n    \"value\": \"PROYECCION\"\n  },\n  {\n    \"label\": \"DESCOMISION\",\n    \"value\": \"DESCOMISION\"\n  },\n  {\n    \"label\": \"NO APLICA\",\n    \"value\": \"NO APLICA\"\n  },\n  {\n    \"label\": \"PENDIENTE\",\n    \"value\": \"PENDIENTE\"\n  },\n  {\n    \"label\": \"LIQUIDACION\",\n    \"value\": \"LIQUIDACION\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"label\": \"PROYECCION\",\n    \"value\": \"PROYECCION\"\n  },\n  {\n    \"label\": \"DESCOMISION\",\n    \"value\": \"DESCOMISION\"\n  },\n  {\n    \"label\": \"NO APLICA\",\n    \"value\": \"NO APLICA\"\n  },\n  {\n    \"label\": \"PENDIENTE\",\n    \"value\": \"PENDIENTE\"\n  },\n  {\n    \"label\": \"LIQUIDACION\",\n    \"value\": \"LIQUIDACION\"\n  },\n  {\n    \"label\": \"PENALIZACION\",\n    \"value\": \"PENALIZACION\"\n  }\n]",
   "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,

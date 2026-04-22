@@ -25,6 +25,7 @@ LEFT JOIN sales_management.dim_campaigns b ON a.idcampa = b.idcampaña
 	WHERE 
 	b.cartera = ANY({{MultiSelect1.selectedOptionValues}})
 	AND b.state_report = 1 -- a.idcampa IN (240,233,228,213,89, 235)
+	AND a.status = 1
 	
 GROUP BY
     a.idcampa
